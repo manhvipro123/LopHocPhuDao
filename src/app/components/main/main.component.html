@@ -1,0 +1,23 @@
+<h1>DANH SACH MAT HANG HIEN CO</h1>
+<div style="display: flex;flex-wrap: wrap;gap:10px">
+    @for (item of shopService.danhSachSanPham; track $index) {
+        <mat-card class="example-card" >
+            <mat-card-header>
+                <div mat-card-avatar class="example-header-image"></div>
+                <mat-card-title>{{item.id}}</mat-card-title>
+                <mat-card-subtitle>{{item.ten}}</mat-card-subtitle>
+            </mat-card-header>
+            <img mat-card-image src="https://material.angular.io/assets/img/examples/shiba2.jpg" alt="Photo of a Shiba Inu">
+            <mat-card-content>
+                <p>
+                    {{item.gia}}
+                </p>
+            </mat-card-content>
+            <mat-card-actions>
+                <button mat-button (click)="shopService.boGioHang(item)">MUA</button>
+                <button mat-button (click)="shopService.xoaSanPham($index)">XOA</button>
+            </mat-card-actions>
+        </mat-card>
+    }
+</div>
+

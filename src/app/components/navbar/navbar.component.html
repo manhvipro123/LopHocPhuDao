@@ -1,0 +1,25 @@
+<div id="navbar-container">
+    <!--        id-->
+    <input type="text" placeholder="id" [(ngModel)]="id">
+    <!--        name-->
+    <input type="text" placeholder="ten" [(ngModel)]="ten">
+    <!--        price-->
+    <input type="text" placeholder="gia" [(ngModel)]="gia">
+    <!--        image-->
+    <input type="text" placeholder="hinh" [(ngModel)]="hinh">
+    <!--        description-->
+    <input type="text" placeholder="mo ta" [(ngModel)]="moTa">
+    <!--        quantity-->
+    <input type="text" placeholder="so luong" [(ngModel)]="soLuong">
+
+    <button mat-flat-button (click)="shopService.themSanPham({
+            id: id,
+            ten: ten,
+            gia: gia,
+            hinh: hinh,
+            moTa: moTa,
+            soLuong: soLuong
+        })">Add
+    </button>
+
+</div>
